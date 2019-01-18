@@ -31,3 +31,5 @@ COPY src/main/java src/main/java
 COPY src/main/resources src/main/resources
 COPY --from=front-end-builder /teammates-web/src/main/webapp src/main/webapp
 RUN ./gradlew createConfigs assemble
+
+ENTRYPOINT ["./gradlew", "appengineRun", "-Pappengine_host=teammatescontainer"]

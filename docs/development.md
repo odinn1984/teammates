@@ -96,16 +96,18 @@ Go to `Run → Stop 'Google App Engine Standard Local Server'`.
 
 ### With Docker
 
+You first need to build the application container:
+
+```sh
+docker build --pull -t teammates:latest .
+```
+
+where `teammates:latest` can be replaced with any name and version tag that you want to use.
+
 Run this command to start the application container:
 
 ```sh
-docker-compose up
-```
-
-To recreate the docker images and containers (e.g: following a code change), use the following command:
-
-```sh
-docker-compose up --build --force-recreate
+docker run -p 8080:8080 -h teammatescontainer teammates:latest
 ```
 
 The dev server will be accessible at `http://localhost:8080` and is able to serve both back-end and front-end.
