@@ -94,6 +94,24 @@ Go to `Run → Run...` and select `Google App Engine Standard Local Server` in t
 
 Go to `Run → Stop 'Google App Engine Standard Local Server'`.
 
+### With Docker
+
+Run this command to start the application container:
+
+```sh
+docker-compose up
+```
+
+To recreate the docker images and containers (e.g: following a code change), use the following command:
+
+```sh
+docker-compose up --build --force-recreate
+```
+
+The dev server will be accessible at `http://localhost:8080` and is able to serve both back-end and front-end.
+
+**Note:** Recreating the container will delete the datastore and blobstore.
+
 ## Building front-end files
 
 In order for the dev server to be able to serve both the front-end and the back-end of the application, the front-end files need to be *bundled and transpiled* (afterwards `built`).
