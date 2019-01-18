@@ -3,9 +3,6 @@ apt-get update
 curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt-get install -y nodejs
 
-echo "Swapping out 'localhost' in build.gradle for docker container hostname 'tmserver_container' to allow for proper binding"
-sed -i -e 's/"localhost"/"teammatescontainer"/' build.gradle
-
 echo "Building application"
 npm install
 
