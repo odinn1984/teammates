@@ -33,7 +33,7 @@
     "core-js": "^2.5.7",
     "d3": "^5.7.0",
     "file-saver": "^2.0.0",
-    "handsontable": "^6.2.2",
+    "handsontable": "^8.2.0",
     "moment-timezone": "^0.5.23",
     "ngx-clipboard": "^11.1.9",
     "rxjs": "~6.3.3",
